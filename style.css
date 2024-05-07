@@ -19,6 +19,7 @@ img[src*="lebron_pp.png"]{
 
 body{
     margin: 0;
+    background-color: var(--main-bgc);
 }
 
 .container{
@@ -79,6 +80,7 @@ svg + p{
 .content-container{
     display: grid;
     grid-column: 2/3;
+    padding-left: 0.5rem;
     grid-template-rows: 0.5fr 0.5fr 9fr;
 }
 
@@ -132,7 +134,6 @@ input:disabled{
 }
 
 img[src*="pp"]{
-    /* border: 1px solid black; */
     aspect-ratio: 1/1;
     background-color: white;
     border-radius: 50%;
@@ -156,6 +157,7 @@ img[src*="pp"]{
 } 
 
 .profile-subsection > p{
+    padding-left: 3%;
     justify-self: baseline;
     font-weight: 700;
     font-size: 0.8rem;
@@ -197,11 +199,12 @@ button:hover{
 img:hover{
     cursor: pointer;
     opacity: 0.8;
-    transition: all 0.15s;
+    transition: opacity 0.15s;
 }
 
 .project-section{ 
     position: relative;
+    margin-left: -0.5rem;
     grid-row: 3/4;
     display: grid;
     grid-template-columns: 3fr 1.2fr;
@@ -266,7 +269,11 @@ img:hover{
 .svg-subsection svg:hover{
     background-color: #e11d48;
     border-radius: 1rem;
-    transition: all 0.3s;
+    transition: border-radius,background-color 0.3s;
+}
+
+.svg-subsection > svg:last-child{
+    background: none;
 }
 
 aside{
@@ -302,7 +309,6 @@ aside .title{
     box-shadow: 0 0 5px 0 #ccc;
     align-items: start;
     height: 95%;
-    /* tuka smeni nesto  */
 }
 
 @media only screen and (max-width: 1375px){
@@ -350,7 +356,6 @@ aside .title{
     
 }
 .announcements-box div:nth-child(1){
-    /* grid-row: 1/2; */
     padding-top: 2rem;
 }
 
@@ -372,10 +377,8 @@ aside .title{
 .trending-card{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    /* justify-items: center; */
     align-items: center;
     padding: 0.2em 1em;
-    /* background-color: lightblue; */
 }
 
 .name-tag-subsection > *{
@@ -391,3 +394,4 @@ aside .title{
 .name-tag-subsection > p:last-of-type{
     color: rgb(76, 76, 76);
 }
+
